@@ -1,0 +1,122 @@
+{
+  "os": {
+    "system": "Windows",
+    "release": "10",
+    "version": "10.0.26200",
+    "architecture": "AMD64"
+  },
+  "cpu": {
+    "cpu_name": "Intel(R) Core(TM) Ultra 5 225H",
+    "arch": "AMD64",
+    "physical_cores": 14,
+    "logical_cores": 14,
+    "l1d_per_core_kb": 48.0,
+    "l1i_per_core_kb": 64.0,
+    "l2_per_core_kb": 2048.0,
+    "l3_total_mb": 18.0,
+    "cache_line_bytes": 64,
+    "l1_aggregate_kb": 1408,
+    "l2_aggregate_kb": 22528,
+    "l3_aggregate_kb": 18432,
+    "cache_detection_method": "Windows CIM Win32_Processor & Win32_CacheMemory"
+  },
+  "compiler": {
+    "c_compiler": "gcc",
+    "compiler_version": "gcc (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1) 16.2.0",
+    "openmp_supported": true
+  },
+  "python": {
+    "version": "3.11.9",
+    "executable": "C:\\Users\\Mahesh M\\AppData\\Local\\Programs\\Python\\Python311\\python.exe"
+  },
+  "tile_candidates": [
+    {
+      "tile_size": 8,
+      "single_tile_kb": 0.5,
+      "working_set_3tile_kb": 1.5,
+      "l1d_occupancy_pct": 3.125,
+      "l2_occupancy_pct": 0.0732421875,
+      "category": "L1D Cache Bound (Fits in L1D)"
+    },
+    {
+      "tile_size": 16,
+      "single_tile_kb": 2.0,
+      "working_set_3tile_kb": 6.0,
+      "l1d_occupancy_pct": 12.5,
+      "l2_occupancy_pct": 0.29296875,
+      "category": "L1D Cache Bound (Fits in L1D)"
+    },
+    {
+      "tile_size": 32,
+      "single_tile_kb": 8.0,
+      "working_set_3tile_kb": 24.0,
+      "l1d_occupancy_pct": 50.0,
+      "l2_occupancy_pct": 1.171875,
+      "category": "L1D Cache Bound (Fits in L1D)"
+    },
+    {
+      "tile_size": 48,
+      "single_tile_kb": 18.0,
+      "working_set_3tile_kb": 54.0,
+      "l1d_occupancy_pct": 112.5,
+      "l2_occupancy_pct": 2.63671875,
+      "category": "L2 Cache Bound (Fits in L2)"
+    },
+    {
+      "tile_size": 64,
+      "single_tile_kb": 32.0,
+      "working_set_3tile_kb": 96.0,
+      "l1d_occupancy_pct": 200.0,
+      "l2_occupancy_pct": 4.6875,
+      "category": "L2 Cache Bound (Fits in L2)"
+    },
+    {
+      "tile_size": 96,
+      "single_tile_kb": 72.0,
+      "working_set_3tile_kb": 216.0,
+      "l1d_occupancy_pct": 450.0,
+      "l2_occupancy_pct": 10.546875,
+      "category": "L2 Cache Bound (Fits in L2)"
+    },
+    {
+      "tile_size": 128,
+      "single_tile_kb": 128.0,
+      "working_set_3tile_kb": 384.0,
+      "l1d_occupancy_pct": 800.0,
+      "l2_occupancy_pct": 18.75,
+      "category": "L2 Cache Bound (Fits in L2)"
+    },
+    {
+      "tile_size": 192,
+      "single_tile_kb": 288.0,
+      "working_set_3tile_kb": 864.0,
+      "l1d_occupancy_pct": 1800.0,
+      "l2_occupancy_pct": 42.1875,
+      "category": "L2 Cache Bound (Fits in L2)"
+    },
+    {
+      "tile_size": 256,
+      "single_tile_kb": 512.0,
+      "working_set_3tile_kb": 1536.0,
+      "l1d_occupancy_pct": 3200.0,
+      "l2_occupancy_pct": 75.0,
+      "category": "L2 Cache Bound (Fits in L2)"
+    },
+    {
+      "tile_size": 384,
+      "single_tile_kb": 1152.0,
+      "working_set_3tile_kb": 3456.0,
+      "l1d_occupancy_pct": 7200.0,
+      "l2_occupancy_pct": 168.75,
+      "category": "Exceeds L2 Cache (Spills to L3/RAM)"
+    },
+    {
+      "tile_size": 512,
+      "single_tile_kb": 2048.0,
+      "working_set_3tile_kb": 6144.0,
+      "l1d_occupancy_pct": 12800.0,
+      "l2_occupancy_pct": 300.0,
+      "category": "Exceeds L2 Cache (Spills to L3/RAM)"
+    }
+  ]
+}

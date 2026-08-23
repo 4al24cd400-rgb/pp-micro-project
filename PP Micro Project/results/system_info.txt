@@ -1,0 +1,44 @@
+================================================================================
+                   SYSTEM ARCHITECTURE & HARDWARE REPORT                     
+================================================================================
+Operating System:        Windows 10 (AMD64)
+CPU Model:               Intel(R) Core(TM) Ultra 5 225H
+Physical Cores:          14
+Logical Processors:      14
+Cache Line Size:         64 bytes
+
+Cache Hierarchy:
+  * L1 Data Cache (per-core):        48.0 KB
+  * L1 Instruction Cache (per-core): 64.0 KB
+  * L1 Total Aggregate:              1408 KB
+  * L2 Cache (per-core / cluster):   2048.0 KB (2.0 MB)
+  * L2 Total Aggregate:              22528 KB (22.0 MB)
+  * L3 Cache (Shared LLC):           18.0 MB
+  * Detection Source:                Windows CIM Win32_Processor & Win32_CacheMemory
+
+Compiler & Toolchain:
+  * C Compiler:            gcc
+  * Compiler Version:      gcc (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1) 16.2.0
+  * OpenMP Support:        Enabled
+  * Python Environment:    3.11.9 (C:\Users\Mahesh M\AppData\Local\Programs\Python\Python311\python.exe)
+================================================================================
+     THEORETICAL CACHE WORKING-SET & TILE CANDIDATE MODEL (3-TILE FORMULATION)    
+     Working Set Model: W_approx = A_tile + B_tile + C_tile = 3 * B^2 * 8 Bytes  
+================================================================================
+Tile Size (B)  | Tile Footprint | 3-Tile Set   | % L1D (Per-Core) | % L2 (Per-Core) | Category
+---------------------------------------------------------------------------------------------------------
+8    x 8       |     0.50 KB     |    1.50 KB  |           3.1 %  |         0.07 %  | L1D Cache Bound (Fits in L1D)
+16   x 16      |     2.00 KB     |    6.00 KB  |          12.5 %  |         0.29 %  | L1D Cache Bound (Fits in L1D)
+32   x 32      |     8.00 KB     |   24.00 KB  |          50.0 %  |         1.17 %  | L1D Cache Bound (Fits in L1D)
+48   x 48      |    18.00 KB     |   54.00 KB  |         112.5 %  |         2.64 %  | L2 Cache Bound (Fits in L2)
+64   x 64      |    32.00 KB     |   96.00 KB  |         200.0 %  |         4.69 %  | L2 Cache Bound (Fits in L2)
+96   x 96      |    72.00 KB     |  216.00 KB  |         450.0 %  |        10.55 %  | L2 Cache Bound (Fits in L2)
+128  x 128     |   128.00 KB     |  384.00 KB  |         800.0 %  |        18.75 %  | L2 Cache Bound (Fits in L2)
+192  x 192     |   288.00 KB     |  864.00 KB  |        1800.0 %  |        42.19 %  | L2 Cache Bound (Fits in L2)
+256  x 256     |   512.00 KB     | 1536.00 KB  |        3200.0 %  |        75.00 %  | L2 Cache Bound (Fits in L2)
+384  x 384     |  1152.00 KB     | 3456.00 KB  |        7200.0 %  |       168.75 %  | Exceeds L2 Cache (Spills to L3/RAM)
+512  x 512     |  2048.00 KB     | 6144.00 KB  |       12800.0 %  |       300.00 %  | Exceeds L2 Cache (Spills to L3/RAM)
+---------------------------------------------------------------------------------------------------------
+Note: Theoretical calculations indicate working-set capacity limits. Actual empirical
+optimum is governed by cache associativity, SIMD vectorization, prefetching, and OpenMP.
+================================================================================
